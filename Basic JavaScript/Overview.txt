@@ -1,3 +1,97 @@
-JavaScript is a scripting language you can use to make web pages interactive. It is one of the core technologies of the web, along with HTML and CSS, and is supported by all modern browsers.
+JavaScript is a scripting language you can use to make web pages interactive. 
+It is one of the core technologies of the web, along with HTML and CSS
+It is supported by all modern browsers.
 
-In this course, you'll learn fundamental programming concepts in JavaScript. You'll start with basic data structures like numbers and strings. Then you'll learn to work with arrays, objects, functions, loops, if/else statements, and more.
+In this course, you'll learn fundamental programming concepts in JavaScript.
+ You'll start with basic data structures like numbers and strings. 
+ Then you'll learn to work with arrays, objects, functions, loops, if/else statements, and more.
+
+ DataTypes
+ JavaScript provides eight different data types 
+ undefined, null, boolean, string, symbol, bigint, number, and object
+
+  Variable names can be made up of numbers, letters, and $ or _, but may not contain spaces or 
+  start with a number.
+  invalid declaration 
+   var first name;
+   var 1name;
+
+  var myName = "your name";
+"your name" is called a string literal. 
+A string literal, or string, is a series of zero or more characters enclosed in single or double quotes.
+
+Write variable names in JavaScript in camelCase
+var thisVariableNameIsSoLong;
+
+Differences Between the var and let Keywords
+One of the biggest problems with declaring variables with the var keyword is that 
+you can easily overwrite variable declarations:
+
+var camper = "James";
+var camper = "David";
+console.log(camper);
+
+let and const
+
+A keyword called let was introduced in ES6, a major update to JavaScript,
+to solve this potential issue with the var keyword
+
+If you replace var with let in the code above, it results in an error:
+
+let camper = "James";
+let camper = "David";
+The error can be seen in your browser console.
+
+const has all the awesome features that let has, with the added bonus that variables 
+declared using const are read-only. They are a constant value, which means that once 
+a variable is assigned with const, it cannot be reassigned:
+
+const FAV_PET = "Cats";
+FAV_PET = "Dogs";
+The console will display an error due to reassigning the value of FAV_PET.
+
+Number
+Number is a data type in JavaScript which represents numeric data.
+
+We can store decimal numbers in variables too. Decimal numbers are sometimes referred to 
+as floating point numbers or floats.
+const myDecimal = 5.7;
+
+Escaping Literal Quotes in Strings
+
+In JavaScript, you can escape a quote from considering it as an end of string quote by placing a backslash (\) in front of the quote.
+
+const sampleStr = "Alan said, \"Peter is learning JavaScript\".";
+This signals to JavaScript that the following quote is not the end of the string,
+ but should instead appear inside the string. So if you were to print this to the console, you would get:
+
+Alan said, "Peter is learning JavaScript".
+
+Understand String Immutability
+In JavaScript, String values are immutable, which means that they cannot be altered once created.
+
+For example, the following code will produce an error because the letter B in the string Bob cannot be 
+changed to the letter J:
+
+let myStr = "Bob";
+myStr[0] = "J";
+Note that this does not mean that myStr could not be re-assigned. The only way to change myStr would be 
+to assign it with a new value, like this:
+
+let myStr = "Bob";
+myStr = "Job";
+
+Modify Array Data With Indexes
+Unlike strings, the entries of arrays are mutable and can be changed freely, even if the array was declared with const.
+
+Example
+
+const ourArray = [50, 40, 30];
+ourArray[0] = 15;
+ourArray now has the value [15, 40, 30].
+
+Accessing Object Properties with Bracket Notation
+The second way to access the properties of an object is bracket notation ([]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
+
+However, you can still use bracket notation on object properties without spaces.
+

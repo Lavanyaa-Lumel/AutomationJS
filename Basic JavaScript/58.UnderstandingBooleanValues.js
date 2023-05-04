@@ -1,0 +1,6 @@
+function welcomeToBooleans() {
+   
+    return true; 
+  
+    
+  }
